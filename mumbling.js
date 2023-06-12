@@ -1,12 +1,16 @@
 function accum(s) {
-    var y = [];
+    var y = "";
     let x = s.toLowerCase();
-    console.log(x);
     for (let i = 0; i < x.length; i+=1){
-        console.log(x[i], i);
-      
-
+        let z = `${x[i].toUpperCase()}${x[i].repeat(i)}`; 
+        if (i<1){
+            y += z; 
+        } else {
+        y += "-"+z;
+        }   
+        
     }
+    return y;
 }
     
     /*
